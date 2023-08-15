@@ -1,12 +1,13 @@
 import { styled } from 'styled-components';
 
 export const FormInput = styled.form`
+  padding: 10px;
   border: 2px solid gray;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 300px;
-  align-items: flex-start;
+  width: auto;
+  align-items: center;
 `;
 export const InputName = styled.input`
   margin-left: 26px;
