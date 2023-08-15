@@ -6,4 +6,5 @@ export const Section = styled.div`
   width: 350px;
   padding: 15px;
   background-color: aquamarine;
+  border-radius: 10%;
 `;
