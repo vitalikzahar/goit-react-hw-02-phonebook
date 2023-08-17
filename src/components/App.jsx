@@ -29,7 +29,11 @@ export class App extends Component {
   };
   onSubmit = (name, number) => {
     const contact = { name, number, id: nanoid() };
-    if (this.state.contacts.find(userCard => userCard.name === contact.name)) {
+    if (
+      this.state.contacts.find(
+        userCard => userCard.name.toLowerCase() === contact.name.toLowerCase()
+      )
+    ) {
       return alert(`"${contact.name}  "is already in contact`);
     }
 
