@@ -13,7 +13,6 @@ export class App extends Component {
 
   handleSearch = event => {
     this.setState({ filter: event.target.value });
-    this.filterUsers();
   };
   filterUsers = () => {
     const { contacts, filter } = this.state;
@@ -47,7 +46,7 @@ export class App extends Component {
         <Filter filter={this.state.filter} search={this.handleSearch}></Filter>
         <Contacts
           onDelete={this.handleDelete}
-          filterUsers={this.filterUsers}
+          filterUsers={this.filterUsers()}
           phoneBook={this.state.contacts}
         ></Contacts>
       </Section>
